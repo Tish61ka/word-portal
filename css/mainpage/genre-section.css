@@ -1,0 +1,152 @@
+.section-genre {
+    padding: 100px 104px 100px 104px;
+}
+
+.genre__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: end;
+    column-gap: 100px;
+    row-gap: 20px;
+
+    padding-top: 70px;
+}
+
+.genre__item {
+    width: 232px;
+    height: 48px;
+
+    padding-left: 10px;
+}
+
+.genre__item::marker {
+    content: url('/images/icons/marker.svg');
+}
+
+.genre__item>a {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--color-opal);
+    border-top-right-radius: var(--radius-24);
+    border-bottom-right-radius: var(--radius-24);
+
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.15em;
+    color: var(--color-forest);
+
+    padding-left: 24px;
+}
+
+.genre__item:last-child {
+    width: 256px;
+}
+
+.genre__item:last-child>a {
+    justify-content: center;
+
+    border-radius: var(--radius-24);
+    background-color: var(--color-meadow);
+
+    color: var(--color-opal);
+    font-weight: 700;
+
+    padding-left: 0px;
+}
+
+.genre__item:last-child::marker {
+    content: '';
+}
+
+/* ------------ Laptop ------------- */
+
+@media (max-width: 1600px) {
+    .section-genre {
+        padding: 90px;
+    }
+
+    .genre__wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        justify-items: center;
+        column-gap: 50px;
+        row-gap: 20px;
+    }
+}
+
+/* ------------ Netbook ------------- */
+
+@media (max-width: 1200px) {
+    .section-genre {
+        padding: 70px;
+    }
+}
+
+/* ------------ Big-Tablet ------------- */
+
+@media (max-width: 1050px) {
+    .section-genre {
+        padding: 70px 30px;
+    }
+
+    .genre__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        justify-items: center;
+        column-gap: 75px;
+        row-gap: 20px;
+
+        padding-top: 50px;
+    }
+}
+
+/* ------------ big-Mobile ------------- */
+
+@media (max-width: 620px) {
+    .genre__wrapper {
+        column-gap: 15px;
+    }
+
+    .genre__item {
+        width: 200px;
+    }
+
+    .genre__item:last-child {
+        width: 220px;
+    }
+
+    .genre__item>a {
+        font-size: 16px;
+
+        padding-left: 15px;
+    }
+}
+
+/* ------------ Mobile ------------- */
+
+@media (max-width: 480px) {
+    .section-genre {
+        padding: 50px 20px;
+    }
+
+    .genre__wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+
+        padding-top: 30px;
+    }
+
+    .genre__item {
+        width: 90%;
+    }
+
+    .genre__item:last-child {
+        width: 100%;
+    }
+
+}

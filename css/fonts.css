@@ -1,0 +1,14 @@
+@font-face {
+    font-family: PlayfairDisplay;
+    src: url("/fonts/PlayfairDisplay/PlayfairDisplay-VariableFont_wght.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: PlayfairDisplayItalic;
+    src: url("/fonts/PlayfairDisplay/PlayfairDisplay-Italic-VariableFont_wght.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: OldStandard;
+    src: url("/fonts/OldStandard/OldStandardTT-Regular.ttf") format('truetype');
+}

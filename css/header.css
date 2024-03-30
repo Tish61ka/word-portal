@@ -1,0 +1,142 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding-top: 37px;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid var(--color-opal);
+
+    padding-bottom: 31px;
+}
+
+.logo {
+    width: 129px;
+}
+
+.logo img {
+    width: 100%;
+
+    object-fit: cover;
+}
+
+.header__wrapper nav ul {
+    display: flex;
+    align-items: center;
+    gap: 90px;
+}
+
+.header__wrapper nav ul li a {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--color-opal);
+    font-family: var(--play);
+
+    background-image: linear-gradient(var(--color-opal), var(--color-opal));
+    background-repeat: no-repeat;
+    background-position: left bottom 1px;
+    background-size: 0 1px;
+
+    transition: 400ms;
+    -webkit-transition: 400ms;
+    -moz-transition: 400ms;
+
+    padding-bottom: 5px;
+}
+
+.header__wrapper nav ul li a:hover {
+    background-size: 100% 1px;
+}
+
+/* ------------ Big-Tablet ------------- */
+
+@media (max-width: 1050px) {
+    .logo {
+        width: 90px;
+    }
+
+    .header__wrapper nav ul {
+        gap: 50px;
+    }
+}
+
+/* ------------ Tablet ------------- */
+
+@media (max-width: 740px) {
+
+    .header__wrapper.container {
+        width: min(calc(100% - 60px), 100%);
+    }
+
+}
+
+/* ------------ big-Mobile ------------- */
+
+@media (max-width: 620px) {
+
+    .header__wrapper.container {
+        width: min(calc(100% - 20px), 100%);
+    }
+
+    .logo {
+        width: 70px;
+    }
+
+    .header__wrapper nav ul {
+        gap: 30px;
+    }
+
+    .header__wrapper nav ul li a {
+        font-size: 16px;
+    }
+
+    .user-icon {
+        width: 30px;
+    }
+
+    .user-icon img {
+        width: 100%;
+    }
+}
+
+/* ------------ Mobile ------------- */
+
+@media (max-width: 480px) {
+
+    header {
+        padding-top: 20px;
+    }
+
+    .header__wrapper {
+        padding-bottom: 20px;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .header__wrapper nav ul {
+        gap: 15px;
+    }
+
+    .header__wrapper nav ul li a {
+        font-size: 13px;
+    }
+
+    .user-icon {
+        width: 25px;
+    }
+
+}
+
+/* ------------ Small Mobile ------------- */
+
+@media (max-width: 390px) {}
