@@ -16,6 +16,7 @@
      --color-opal: #eeefe9;
      --color-lily: #e8d9cd;
      --color-meadow: #78856B;
+     --color-meadow-100: #959d90;
      --color-chestnut: #bba58f;
      --color-forest: #243030;
      --color-woodland: #4E3D35;
@@ -149,6 +150,19 @@
      color: var(--color-forest);
 
      white-space: nowrap;
+ }
+
+ .subtitle-section {
+     width: 100%;
+
+     font-family: var(--play);
+     font-weight: 700;
+     font-size: 14px;
+     letter-spacing: 0.15em;
+     text-align: center;
+     color: var(--color-meadow-100);
+
+     margin-top: 20px;
  }
 
  /* ------------ Laptop ------------- */
