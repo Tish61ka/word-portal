@@ -1,4 +1,4 @@
-.login-section {
+.reg-section {
     height: 100vh;
     height: 100dvh;
 
@@ -8,11 +8,11 @@
     background-position: center center;
 }
 
-.login-section * {
+.reg-section * {
     font-family: var(--play);
 }
 
-.login__wrapper {
+.reg__wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,7 +23,7 @@
     height: 100%;
 }
 
-.login__wrapper h1 {
+.reg__wrapper h1 {
     position: relative;
 
     width: 100%;
@@ -34,7 +34,7 @@
     color: var(--color-opal);
 }
 
-.login__wrapper h1 p {
+.reg__wrapper h1 p {
     text-align: right;
     font-weight: 600;
     font-size: 18px;
@@ -44,25 +44,25 @@
     transform: translateX(-59px);
 }
 
-.login__wrapper form {
+.reg__wrapper form {
     display: flex;
     flex-direction: column;
-    gap: 65px;
+    gap: 23px;
 
     width: 100%;
 }
 
-.form__wrapper {
+.form__wrapper-reg {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 23px;
 }
 
-.form__wrapper>div {
+.form__wrapper-reg>div {
     position: relative;
 }
 
-.form__wrapper input {
+.form__wrapper-reg input:not([type=radio]) {
     width: 100%;
     height: 48px;
 
@@ -80,11 +80,75 @@
     padding-left: 24px;
 }
 
-.form__wrapper input::placeholder {
+.form__wrapper-reg input::placeholder {
     font-weight: 400;
     font-size: 18px;
     letter-spacing: 0.15em;
     color: var(--color-opal);
+}
+
+.form__radio {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.form__radio input:checked+label::before {
+    content: "";
+
+    width: 70%;
+    height: 70%;
+}
+
+.form__radio input+label::before {
+    content: "";
+
+    width: 0%;
+    height: 0%;
+
+    border-radius: var(--radius-50);
+    background-color: var(--color-opal);
+
+    transition: linear 200ms;
+    -webkit-transition: linear 200ms;
+    -moz-transition: linear 200ms;
+}
+
+.form__radio label {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 22px;
+    height: 22px;
+
+    backdrop-filter: blur(5px);
+    background: rgba(217, 217, 217, 0.3);
+    border-radius: var(--radius-50);
+    border: 1px solid var(--color-opal);
+
+    cursor: pointer;
+}
+
+.form__radio label.warning {
+    border: 2px solid var(--color-red);
+    background-color: var(--color-white);
+}
+
+.form__radio input {
+    display: none;
+}
+
+.form__radio a {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-align: center;
+    color: var(--color-opal);
+
+    cursor: default;
 }
 
 .form_btns {
@@ -127,43 +191,51 @@
 /* ------------ Laptop ------------- */
 
 @media (max-width: 1600px) {
-    .login__wrapper {
+    .reg__wrapper {
         justify-content: flex-end;
         gap: 45px;
 
         max-width: 450px;
-        height: 100%;
+        height: calc(100% - 168px);
 
-        padding-bottom: 120px;
+        transform: translateY(128px);
     }
 
-    .login__wrapper h1 {
+    .reg__wrapper h1 {
         font-size: 100px;
     }
 
-    .login__wrapper h1 p {
+    .reg__wrapper h1 p {
         font-size: 16px;
         color: var(--color-white);
 
         transform: translateX(-93px);
     }
 
-    .login__wrapper form {
+    .reg__wrapper form {
         gap: 45px;
     }
 
-    .form__wrapper {
+    .form__wrapper-reg {
         gap: 20px;
     }
 
-    .form__wrapper input {
+    .form__wrapper-reg input:not([type=radio]) {
         height: 40px;
 
         font-size: 16px;
     }
 
-    .form__wrapper input::placeholder {
+    .form__wrapper-reg input::placeholder {
         font-size: 16px;
+    }
+
+    .form__radio {
+        gap: 35px;
+    }
+
+    .form__radio a {
+        font-size: 13px;
     }
 
     .form_btns {
@@ -184,41 +256,55 @@
 /* ------------ Netbook ------------- */
 
 @media (max-width: 1200px) {
-    .login__wrapper {
+    .reg__wrapper {
         gap: 30px;
 
         max-width: 390px;
-        height: 100%;
+        height: calc(100% - 148px);
 
+        transform: translateY(128px);
     }
 
-    .login__wrapper h1 {
+    .reg__wrapper h1 {
         font-size: 80px;
     }
 
-    .login__wrapper h1 p {
+    .reg__wrapper h1 p {
         font-size: 14px;
         color: var(--color-white);
 
         transform: translateX(-93px);
     }
 
-    .login__wrapper form {
+    .reg__wrapper form {
         gap: 30px;
     }
 
-    .form__wrapper {
+    .form__wrapper-reg {
         gap: 16px;
     }
 
-    .form__wrapper input {
+    .form__wrapper-reg input:not([type=radio]) {
         height: 35px;
 
         font-size: 15px;
     }
 
-    .form__wrapper input::placeholder {
+    .form__wrapper-reg input::placeholder {
         font-size: 15px;
+    }
+
+    .form__radio {
+        gap: 25px;
+    }
+
+    .form__radio label {
+        width: 18px;
+        height: 18px;
+    }
+
+    .form__radio a {
+        font-size: 12px;
     }
 
     .form_btns {
@@ -239,19 +325,25 @@
 /* ------------ Big-Tablet ------------- */
 
 @media (max-width: 1050px) {
-    .login__wrapper {
+    .reg__wrapper {
         justify-content: center;
         gap: 30px;
 
         max-width: 390px;
         height: 100%;
+
+        transform: translateY(0);
+    }
+
+    .form__radio label.warning {
+        border: 1px solid var(--color-red);
     }
 }
 
 /* ------------ Mobile ------------- */
 
 @media (max-width: 480px) {
-    .login__wrapper {
+    .reg__wrapper {
         align-items: start;
         justify-content: center;
         gap: 30px;
@@ -261,16 +353,29 @@
         padding: 0 30px;
     }
 
-    .login__wrapper h1 {
+    .reg__wrapper h1 {
         width: fit-content;
     }
 
-    .login__wrapper h1 p {
+    .reg__wrapper h1 p {
         transform: translateX(63px);
     }
 
-    .form__wrapper input {
+    .form__wrapper-reg input:not([type=radio]) {
         height: 40px;
+    }
+
+    .form__radio {
+        gap: 10px;
+    }
+
+    .form__radio label {
+        width: 15px;
+        height: 15px;
+    }
+
+    .form__radio a {
+        font-size: 11px;
     }
 
     .form_btns button {
@@ -281,7 +386,7 @@
 /* ------------ Small Mobile ------------- */
 
 @media (max-width: 390px) {
-    .login__wrapper {
+    .reg__wrapper {
         padding: 0 10px;
     }
 }
