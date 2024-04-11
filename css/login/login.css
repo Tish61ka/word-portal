@@ -107,6 +107,10 @@
     color: var(--color-opal);
 }
 
+.form_btns button.warning {
+    background-color: var(--color-woodland);
+}
+
 .form_btns p {
     font-weight: 400;
     font-size: 14px;
