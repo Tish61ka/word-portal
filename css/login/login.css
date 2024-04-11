@@ -1,0 +1,275 @@
+.login-section {
+    height: 100vh;
+    height: 100dvh;
+
+    background-image: url('/images/back-section-main.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.login-section * {
+    font-family: var(--play);
+}
+
+.login__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+
+    max-width: 490px;
+    height: 100%;
+}
+
+.login__wrapper h1 {
+    position: relative;
+
+    width: 100%;
+
+    font-weight: 900;
+    font-size: 128px;
+    letter-spacing: 0.05em;
+    color: var(--color-opal);
+}
+
+.login__wrapper h1 p {
+    text-align: right;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.15em;
+    color: var(--color-white);
+
+    transform: translateX(-59px);
+}
+
+.login__wrapper form {
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+
+    width: 100%;
+}
+
+.form__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form__wrapper>div {
+    position: relative;
+}
+
+.form__wrapper input {
+    width: 100%;
+    height: 48px;
+
+    border: 1px solid var(--color-opal);
+    border-radius: var(--radius-24);
+    backdrop-filter: blur(5px);
+    background: rgba(217, 217, 217, 0.3);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.15em;
+    color: var(--color-opal);
+
+    padding-left: 24px;
+}
+
+.form__wrapper input::placeholder {
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.15em;
+    color: var(--color-opal);
+}
+
+.form_btns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form_btns button {
+    width: 100%;
+    height: 48px;
+
+    border-radius: var(--radius-24);
+    background-color: var(--color-meadow);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.15em;
+    color: var(--color-opal);
+}
+
+.form_btns p {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-align: center;
+    color: var(--color-opal);
+}
+
+.form_btns p a {
+    font-weight: 900;
+    color: var(--color-opal);
+}
+
+/* ------------ Laptop ------------- */
+
+@media (max-width: 1600px) {
+    .login__wrapper {
+        justify-content: flex-end;
+        gap: 45px;
+
+        max-width: 450px;
+        height: 100%;
+
+        padding-bottom: 120px;
+    }
+
+    .login__wrapper h1 {
+        font-size: 100px;
+    }
+
+    .login__wrapper h1 p {
+        font-size: 16px;
+        color: var(--color-white);
+
+        transform: translateX(-93px);
+    }
+
+    .login__wrapper form {
+        gap: 45px;
+    }
+
+    .form__wrapper {
+        gap: 20px;
+    }
+
+    .form__wrapper input {
+        height: 40px;
+
+        font-size: 16px;
+    }
+
+    .form__wrapper input::placeholder {
+        font-size: 16px;
+    }
+
+    .form_btns {
+        gap: 15px;
+    }
+
+    .form_btns button {
+        height: 40px;
+
+        font-size: 16px;
+    }
+
+    .form_btns p {
+        font-size: 13px;
+    }
+}
+
+/* ------------ Netbook ------------- */
+
+@media (max-width: 1200px) {
+    .login__wrapper {
+        gap: 30px;
+
+        max-width: 390px;
+        height: 100%;
+
+    }
+
+    .login__wrapper h1 {
+        font-size: 80px;
+    }
+
+    .login__wrapper h1 p {
+        font-size: 14px;
+        color: var(--color-white);
+
+        transform: translateX(-93px);
+    }
+
+    .login__wrapper form {
+        gap: 30px;
+    }
+
+    .form__wrapper {
+        gap: 16px;
+    }
+
+    .form__wrapper input {
+        height: 35px;
+
+        font-size: 15px;
+    }
+
+    .form__wrapper input::placeholder {
+        font-size: 15px;
+    }
+
+    .form_btns {
+        gap: 10px;
+    }
+
+    .form_btns button {
+        height: 35px;
+
+        font-size: 15px;
+    }
+
+    .form_btns p {
+        font-size: 12px;
+    }
+}
+
+/* ------------ Big-Tablet ------------- */
+
+@media (max-width: 1050px) {
+    .login__wrapper {
+        justify-content: center;
+        gap: 30px;
+
+        max-width: 390px;
+        height: 100%;
+    }
+}
+
+/* ------------ Mobile ------------- */
+
+@media (max-width: 480px) {
+    .login__wrapper {
+        align-items: start;
+        justify-content: center;
+        gap: 30px;
+
+        max-width: none;
+
+        padding: 0 30px;
+    }
+
+    .login__wrapper h1 {
+        width: fit-content;
+    }
+
+    .login__wrapper h1 p {
+        transform: translateX(63px);
+    }
+
+    .form__wrapper input {
+        height: 40px;
+    }
+
+    .form_btns button {
+        height: 40px;
+    }
+}
