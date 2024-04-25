@@ -380,7 +380,7 @@
                             <a href="">
                                 <img src="/images/icons/edit.png" alt="">
                             </a>
-                            <a href="">
+                            <a href="" class="delete-icon">
                                 <img src="/images/icons/delete.png" alt="">
                             </a>
                         </div>
@@ -388,7 +388,13 @@
                             Читать
                         </a>
                     </div>
-
+                    <div class="modal-delete">
+                        <p>Вы уверены, что хотите удалить свою работу?</p>
+                        <div class="modal-delete__btns">
+                            <a class="modal-delete__btn">Удалить</a>
+                            <button class="modal-delete__btn close-modal-delete">Отмена</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="work__item">
                     <div class="work__item-bookmarks">
@@ -553,7 +559,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="/js/app.js"></script>
 </body>
 
 </html>
