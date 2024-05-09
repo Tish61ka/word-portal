@@ -5,6 +5,7 @@ header {
 
     width: 100%;
 
+    z-index: 5;
     padding-top: 37px;
 }
 
