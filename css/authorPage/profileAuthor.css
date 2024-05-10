@@ -73,6 +73,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
 }
 
 .profile-info__item-text>div {
@@ -82,7 +83,7 @@
 }
 
 .profile-info__item-text>div p {
-    flex: 1 0 50%;
+    flex: 1 0 calc(70% - 32px);
 
     font-family: var(--old);
     font-weight: 400;
@@ -93,10 +94,11 @@
 
 .profile-info__item-text>div p.profile-info__item-text-title {
     font-weight: 700;
+    flex: 1 0 calc(28% - 32px);
 }
 
 .profile-info__item-text>div p:not(.profile-info__item-text-title) {
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 .profile-info__item-btns {
@@ -301,7 +303,7 @@
     .profile-info__item-btns {
         position: absolute;
         left: 160px;
-        top: -20px;
+        top: -26px;
     }
 
     .profile-info__item-btns button {
@@ -315,6 +317,17 @@
         border-bottom-left-radius: 0px;
         border-top-right-radius: var(--radius-24);
         border-bottom-right-radius: var(--radius-24);
+    }
+
+
+    .profile-info__item-text>div p.profile-info__item-text-title {
+        flex: 1 0 calc(20% - 32px);
+    }
+}
+
+@media (max-width: 620px) {
+    .profile-info__item-text>div p.profile-info__item-text-title {
+        flex: 1 0 calc(33% - 32px);
     }
 }
 
@@ -361,7 +374,7 @@
     }
 
     .user-profile .profile-info__item-btns {
-        top: -16px;
+        top: -55px;
 
         gap: 5px;
     }
@@ -384,6 +397,14 @@
 
     .profile-info__item-content {
         gap: 80px;
+    }
+
+    .profile-info__item-text>div p {
+        flex: 1 0 calc(70% - 12px);
+    }
+
+    .profile-info__item-text>div p.profile-info__item-text-title {
+        flex: 1 0 calc(33% - 12px);
     }
 }
 
