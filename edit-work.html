@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/form.css"> <!-- Привязывать там где есть форма кроме регистрации и логина -->
+
+    <link rel="stylesheet" href="/css/mainpage/main-section.css"> <!-- css named by section classes -->
+    <link rel="stylesheet" href="/css/authorPage/editProfile.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="header__wrapper container">
+            <a href="/" class="logo">
+                <img src="/images/icons/logo.svg" alt="Logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/works">РАБОТЫ</a></li>
+                    <li><a href="/authors">АВТОРЫ</a></li>
+                    <li><a href="/download">ЗАГРУЗИТЬ</a></li>
+                </ul>
+            </nav>
+            <a href="/login" class="user-icon">
+                <img src="/images/icons/user.png" alt="LogIn">
+            </a>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="main-section ">
+
+
+        </section>
+        <section class="form-section edit-profile">
+            <div class="form-section__container">
+                <!-- Не трогай мой второй хедер, без него моя кривая верстка ломается, его по факту нет,но он нужен -->
+                <header>
+                    <div class="header__wrapper container">
+                        <a href="/" class="logo">
+                            <img src="/images/icons/logo.svg" alt="Logo">
+                        </a>
+                        <nav>
+                            <ul>
+                                <li><a href="/">РАБОТЫ</a></li>
+                                <li><a href="/">АВТОРЫ</a></li>
+                                <li><a href="/">ЗАГРУЗИТЬ</a></li>
+                            </ul>
+                        </nav>
+                        <a href="/login" class="user-icon">
+                            <img src="/images/icons/user.png" alt="LogIn">
+                        </a>
+                    </div>
+
+                </header>
+                <div class="form-section__wrapper container section-background">
+                    <div class="title">
+                        <div class="title__wrapper-line title__wrapper-line-left">
+                            <span class="title__line title__line-left"></span>
+                        </div>
+                        <div class="title__item">
+                            <h2>ДОБАВИТЬ РАБОТУ</h2>
+                        </div>
+                        <div class="title__wrapper-line title__wrapper-line-right">
+                            <span class="title__line title__line-right"></span>
+                        </div>
+                    </div>
+
+                    <p class="subtitle-section">Публикация работы на сайт</p>
+
+                    <div class="form">
+                        <div class="form__item-radio">
+                            <p>ТИП:</p>
+                            <div>
+                                <div class="radio-div">
+                                    <input type="radio" name="rad" id="rad1" value="1">
+                                    <label for="rad1"></label>
+                                    <p>Личное авторство</p>
+                                </div>
+                                <div class="radio-div">
+                                    <input type="radio" name="rad" id="rad2" value="1">
+                                    <label for="rad2"></label>
+                                    <p>Перевод с иностранного языка</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form__item">
+                            <p>НАЗВАНИЕ:</p>
+                            <input type="text" required placeholder="Название">
+                        </div>
+
+                        <div class="form__item-select">
+                            <p>КАТЕГОРИЯ:</p>
+                            <div class="select"> <!--  для открытия селекта добавить класс opened -->
+                                <div class="vissible-content">
+                                    <p>Категория</p>
+                                    <!-- при выборе радио этой <p> добавить класс checked если не выбрано ремувать класс -->
+                                    <img src="/images/icons/Arrow.svg" alt="">
+                                </div>
+                                <div class="select__item">
+                                    <div class="select__item-radio">
+                                        <input type="radio" name="sel-rad" id="1">
+                                        <label for="1">Оригинальное</label>
+                                    </div>
+                                    <div class="select__item-radio">
+                                        <input type="radio" name="sel-rad" id="2">
+                                        <label for="2">Знаменитости</label>
+                                    </div>
+                                    <div class="select__item-radio">
+                                        <input type="radio" name="sel-rad" id="3">
+                                        <label for="3">Фильмы/Сериалы</label>
+                                    </div>
+                                    <div class="select__item-radio">
+                                        <input type="radio" name="sel-rad" id="4">
+                                        <label for="4">Книги</label>
+                                    </div>
+                                    <div class="select__item-radio">
+                                        <input type="radio" name="sel-rad" id="5">
+                                        <label for="5">Комиксы</label>
+                                    </div>
+                                    <div class="select__item-radio">
+                                        <input type="radio" name="sel-rad" id="6">
+                                        <label for="6">Аниме</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form__item">
+                            <p>НАЗВАНИЕ ОРИГИНАЛЬНОГО ПРОИЗВЕДЕНИЯ:</p>
+                            <input type="text" required placeholder="Название">
+                        </div>
+
+                        <div class="form__item-select">
+                            <p>ЖАНРЫ:</p>
+                            <div class="select opened">
+                                <div class="vissible-content">
+                                    <p class="destroy">Жанры</p><!-- при cheсked отправлять добавлять класс destroy -->
+                                    <!--  при чекед вставлять div который ниже-->
+                                    <div class="cheked__items">
+                                        <div class="cheked__item">
+                                            <img src="images/icons/delete.png" alt="">
+                                            <p>Драма</p>
+                                        </div>
+                                        <div class="cheked__item">
+                                            <img src="images/icons/delete.png" alt="">
+                                            <p>Психология</p>
+                                        </div>
+                                        <div class="cheked__item">
+                                            <img src="images/icons/delete.png" alt="">
+                                            <p>Приключения</p>
+                                        </div>
+                                        <div class="cheked__item">
+                                            <img src="images/icons/delete.png" alt="">
+                                            <p>Романтика</p>
+                                        </div>
+                                        <div class="cheked__item">
+                                            <img src="images/icons/delete.png" alt="">
+                                            <p>Комедия</p>
+                                        </div>
+                                        <div class="cheked__item">
+                                            <img src="images/icons/delete.png" alt="">
+                                            <p>Фантастика</p>
+                                        </div>
+                                    </div>
+                                    <img src="/images/icons/Arrow.svg" alt="">
+                                </div>
+                                <div class="select__item">
+                                    <div class="select__item-radio">
+                                        <input type="checkbox" name="sel-check" id="check-1">
+                                        <label for="check-1">Психология</label>
+                                    </div>
+                                    <div class="select__item-radio">
+                                        <input type="checkbox" name="sel-check" id="check-2">
+                                        <label for="check-2">Драма</label>
+                                    </div>
+                                    <div class="select__item-radio">
+                                        <input type="checkbox" name="sel-check" id="check-3">
+                                        <label for="check-3">Романтика</label>
+                                    </div>
+                                    <div class="select__item-radio">
+                                        <input type="checkbox" name="sel-check" id="check-4">
+                                        <label for="check-4">Приключения</label>
+                                    </div>
+                                    <div class="select__item-radio">
+                                        <input type="checkbox" name="sel-check" id="check-5">
+                                        <label for="check-5">Комедия</label>
+                                    </div>
+                                    <div class="select__item-radio">
+                                        <input type="checkbox" name="sel-check" id="check-6">
+                                        <label for="check-6">Фантастика</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form__item">
+                            <p>АННОТАЦИЯ:</p>
+                            <textarea name="" id="" required placeholder="Текст аннотации"></textarea>
+                        </div>
+
+                        <div class="form__item">
+                            <p>ПРИМЕЧАНИЯ:</p>
+                            <textarea name="" id="" required placeholder="Примечания"></textarea>
+                        </div>
+
+                        <div class="form__item">
+                            <p>ПОСВЯЩЕНИЯ:</p>
+                            <textarea name="" id="" required placeholder="Текст посвящения"></textarea>
+                        </div>
+
+                        <div class="form__item-radio">
+                            <p></p>
+                            <div>
+                                <div class="radio-div">
+                                    <input type="radio" name="policy" id="rad3">
+                                    <label for="rad3"></label>
+                                    <p>Я подтверждаю, что являюсь автором публикуемого мной текста и понимаю, что
+                                        публикация чужих работ или публикация работ,
+                                        нарушающих правила, может привести к удалению этих работ и блокировке доступа на
+                                        сайт.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form__item">
+                            <p></p>
+                            <button type="submit">Готово</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer__wrapper container">
+            <div class="footer__item">
+                <a href="/" class="logo">
+                    <img src="/images/icons/logo.svg" alt="Logo">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="/works">РАБОТЫ</a></li>
+                        <li><a href="/authors">АВТОРЫ</a></li>
+                        <li><a href="/download">ЗАГРУЗИТЬ</a></li>
+                    </ul>
+                </nav>
+                <div class="social-network">
+                    <a href="vk.com" class="tg-icon icon">
+                        <img src="/images/icons/tg.png" alt="LogIn">
+                    </a>
+                    <a href="telegram.com" class="vk-icon icon">
+                        <img src="/images/icons/vk.png" alt="LogIn">
+                    </a>
+                </div>
+            </div>
+            <div class="footer__item">
+                <p>Права на все произведения, опубликованные на сайте, принадлежат авторам произведений. Администрация
+                    не несет
+                    ответственности за содержание работ.</p>
+                <div>
+                    <p>WORD PORTAL</p>
+                    <span>|</span>
+                    <a href="mailto:support@wordportal.net">support@wordportal.net</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
