@@ -418,6 +418,73 @@
     padding-top: 10px;
 }
 
+.reviews__item:has(.review__content) {
+    align-items: center;
+}
+
+.review__content {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    width: 100%;
+    height: fit-content;
+    min-height: 150px;
+
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: var(--color-opal);
+
+    padding: 30px 50px 30px 24px;
+}
+
+.review__content>div {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.review__content-name {
+    font-family: var(--old);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    color: var(--color-woodland);
+}
+
+.review__content-time {
+    font-family: var(--old);
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    color: var(--color-meadow);
+}
+
+.review__content-text {
+    font-family: var(--old);
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    color: var(--color-woodland);
+}
+
+.delete-review-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+
+    width: 24px;
+    height: 24px;
+
+    transform: translateY(-50%);
+}
+
+.delete-review-btn img {
+    width: 100%;
+    height: 100%;
+}
+
 /* ------------ Big-Tablet ------------- */
 
 @media (max-width: 1050px) {
@@ -448,6 +515,12 @@
         width: 120px;
         min-width: 120px;
         height: 120px;
+    }
+
+    .review__item-img {
+        width: 100px;
+        min-width: 100px;
+        height: 100px;
     }
 }
 
@@ -507,6 +580,21 @@
         height: 100px;
     }
 
+    .review__item-img {
+        width: 60px;
+        min-width: 60px;
+        height: 60px;
+    }
+
+    .review__content>div {
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .review__content {
+        padding-right: 40px;
+    }
+
     .review__content-not-login h2,
     .review__content-textarea h2 {
         font-size: 24px;
@@ -547,5 +635,20 @@
     .review__content-not-login h2,
     .review__content-textarea h2 {
         font-size: 20px;
+    }
+
+    .review__content {
+        padding-right: 24px;
+    }
+
+    .review__content>div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .delete-review-btn {
+        top: 30px;
+
+        transform: none;
     }
 }
