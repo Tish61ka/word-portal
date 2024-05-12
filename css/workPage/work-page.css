@@ -317,6 +317,8 @@
     gap: 60px;
 
     width: 100%;
+
+    padding: 84px 0;
 }
 
 .reviews__item {
@@ -387,6 +389,21 @@
     .delete-chapter>div button {
         width: 160px;
     }
+
+    .reviews-section__wrapper {
+        gap: 40px;
+
+        padding: 60px 0;
+    }
+
+    .reviews__item {
+        gap: 60px;
+    }
+
+    .review__item-img {
+        width: 120px;
+        height: 120px;
+    }
 }
 
 /* ------------ Tablet ------------- */
@@ -428,6 +445,31 @@
         width: 60%;
         max-width: 115px;
     }
+
+    .reviews-section__wrapper {
+        gap: 30px;
+
+        padding: 40px 0;
+    }
+
+    .reviews__item {
+        gap: 20px;
+    }
+
+    .review__item-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .review__content-not-login h2 {
+        font-size: 24px;
+    }
+
+    .review__content-not-login>a {
+        width: 200px;
+
+        font-size: 16px;
+    }
 }
 
 /* ------------ Mobile ------------- */
@@ -452,5 +494,9 @@
 
     .delete-chapter>div button {
         font-size: 12px;
+    }
+
+    .review__content-not-login h2 {
+        font-size: 20px;
     }
 }
