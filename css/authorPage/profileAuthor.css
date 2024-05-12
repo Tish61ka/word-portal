@@ -306,6 +306,14 @@
         top: -26px;
     }
 
+    .custom-gap {
+        gap: 175px;
+    }
+
+    .custom-top {
+        top: -68px;
+    }
+
     .profile-info__item-btns button {
         gap: 50px;
 
@@ -405,6 +413,14 @@
 
     .profile-info__item-text>div p.profile-info__item-text-title {
         flex: 1 0 calc(33% - 12px);
+    }
+
+    .custom-gap {
+        gap: 125px;
+    }
+
+    .custom-top {
+        top: -50px;
     }
 }
 
