@@ -312,6 +312,29 @@
     cursor: pointer;
 }
 
+.form__item:has(input[type=file]) {
+    justify-content: flex-start;
+}
+
+.form__item input::file-selector-button {
+    height: 38px;
+
+    background-color: var(--color-meadow);
+    border-radius: var(--radius-24);
+    border: none;
+
+    font-family: var(--play);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-align: center;
+    color: var(--color-opal);
+
+    cursor: pointer;
+
+    padding: 0 20px;
+}
+
 /* ------------ Laptop ------------- */
 
 @media (max-width: 1600px) {

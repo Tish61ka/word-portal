@@ -3,6 +3,11 @@
     margin-top: -1px;
 }
 
+.reviews-section {
+    padding: 0px 104px;
+    padding-bottom: 100px;
+}
+
 .book-section__content {
     display: flex;
     flex-direction: column;
@@ -304,11 +309,79 @@
     background-color: var(--color-woodland);
 }
 
+/* Style for reviews section */
+
+.reviews-section__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    width: 100%;
+}
+
+.reviews__item {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.review__item-img {
+    width: 153px;
+    height: 153px;
+
+    border: 2px solid var(--color-red);
+    border-radius: var(--radius-50);
+    background-color: var(--color-woodland);
+}
+
+.review__item-img:has(img) {
+    background: none;
+}
+
+.review__content-not-login {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.review__content-not-login h2 {
+    font-family: var(--play);
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 0.05em;
+    color: var(--color-forest);
+}
+
+.review__content-not-login>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 400px;
+    height: 48px;
+
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: var(--color-meadow);
+    border-radius: var(--radius-24);
+
+    font-family: var(--play);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.15em;
+    text-align: center;
+    color: var(--color-opal);
+}
+
 /* ------------ Big-Tablet ------------- */
 
 @media (max-width: 1050px) {
+
     .book-section {
         padding: 70px 30px;
+    }
+
+    .reviews-section {
+        padding: 0 30px;
     }
 
     .delete-chapter>div button {
@@ -360,8 +433,13 @@
 /* ------------ Mobile ------------- */
 
 @media (max-width: 480px) {
+
     .book-section {
         padding: 50px 20px;
+    }
+
+    .reviews-section {
+        padding: 0 20px;
     }
 
     .delete-chapter>p {
