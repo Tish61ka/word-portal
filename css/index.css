@@ -105,6 +105,11 @@
      color: var(--color-meadow);
 
      transform: translateY(-100%);
+     transition: 200ms;
+ }
+
+ .title__wrapper-line a:hover {
+     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
  }
 
  .title__wrapper-line-left::before {
@@ -166,6 +171,7 @@
 
      white-space: nowrap;
  }
+
 
  .subtitle-section {
      width: 100%;

@@ -15,6 +15,12 @@
     font-weight: 900;
     font-size: 40px;
     color: var(--color-woodland);
+
+    transition: 200ms;
+}
+
+.navigation__item:hover {
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
 }
 
 .navigation__item.green {
