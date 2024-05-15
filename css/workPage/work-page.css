@@ -45,11 +45,18 @@
     width: 100%;
     height: 48px;
 
+    border: 1px solid var(--color-light-white);
     background-color: var(--color-light-white);
     border-top-right-radius: var(--radius-24);
     border-bottom-right-radius: var(--radius-24);
 
     padding: 0 24px;
+
+    transition: 400ms;
+}
+
+.book-section__chapter:hover {
+    background-color: var(--color-opal);
 }
 
 .book-section__chapter::before {
@@ -382,6 +389,12 @@
     letter-spacing: 0.15em;
     text-align: center;
     color: var(--color-opal);
+
+    transition: 400ms;
+}
+
+.reviews__btn:hover {
+    background-color: var(--color-woodland);
 }
 
 .review__content-textarea {

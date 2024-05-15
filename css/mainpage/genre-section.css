@@ -41,6 +41,15 @@
     color: var(--color-forest);
 
     padding-left: 24px;
+
+    transition: 400ms;
+}
+
+.genre__item:not(.genre__item>a:last-child)>a:hover {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: #78856b;
+
+    color: var(--color-opal);
 }
 
 .genre__item:last-child {

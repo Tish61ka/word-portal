@@ -281,16 +281,27 @@
     background-color: var(--color-opal);
     border-bottom-right-radius: var(--radius-24);
     border-top-right-radius: var(--radius-24);
+    border: 1px solid var(--color-opal);
 
     font-family: var(--play);
     font-weight: 400;
     font-size: 15px;
     letter-spacing: 0.15em;
-    color: var(--color-meadow);
+    color: var(--color-woodland);
 
     resize: none;
 
     padding-left: 24px;
+}
+
+.form__item>input[type=text]::placeholder,
+.form__item>textarea::placeholder {
+    color: var(--color-meadow);
+}
+
+.form__item>input[type=text]:focus,
+.form__item>textarea:focus {
+    border: 1px solid var(--color-woodland);
 }
 
 .form__item button {
